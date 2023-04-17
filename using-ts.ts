@@ -64,18 +64,18 @@
 // 컴파일러가 이해할 수 있는 타입스크립트인 추가 구문을 사용해서.
 // num1 : number, num2 : number 이렇게.
 // 타입스크립트에 num1, num2이 숫자 타입이 될 거라고 입력하는 거야.
-const button = document.querySelector("button");
-const input1 = document.getElementById("num1")! as HTMLInputElement;
-const input2 = document.getElementById("num2")! as HTMLInputElement;
+// const button = document.querySelector("button");
+// const input1 = document.getElementById("num1")! as HTMLInputElement;
+// const input2 = document.getElementById("num2")! as HTMLInputElement;
 
-function add(num1: number, num2: number) {
-  //11. 근데 여기서 또 에러가 발생해.
-  return num1 + num2;
-}
+// function add(num1: number, num2: number) {
+//   //11. 근데 여기서 또 에러가 발생해.
+//   return num1 + num2;
+// }
 
-button.addEventListener("click", function () {
-  console.log(add(input1.value, input2.value));
-});
+// button.addEventListener("click", function () {
+//   console.log(add(input1.value, input2.value));
+// });
 
 //12. IDE에서만 에러가 발생하는 게 아니야.
 //이 코드를 컴파일하려고 할 때도 에러가 발생해.
@@ -88,3 +88,15 @@ button.addEventListener("click", function () {
 //현재 이를 수행하는 과정에서 컴파일러 에러가 발생하는데,
 //이를 통해서 타입 문자열의 인수를 숫자 타입의 매개변수에
 //할당할 수 없음을 알 수 있어.
+
+const button = document.querySelector("button");
+const input1 = document.getElementById("num1")! as HTMLInputElement;
+const input2 = document.getElementById("num2")! as HTMLInputElement;
+
+function add(num1: number, num2: number) {
+  return num1 + num2;
+}
+
+button.addEventListener("click", function () {
+  console.log(add(+input1.value, +input2.value));
+});
