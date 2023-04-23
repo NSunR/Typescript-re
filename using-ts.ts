@@ -1,3 +1,9 @@
+//0. 타입스크립트는 프로그래밍 언어지만 자바스크립트로 컴파일하는
+// 컴파일러라는 도구가 있어서 작동하는 프로그래밍언어일 뿐이야.
+//여기 설치한 건 타입스크립트 코드를 이해해서 자바스크립트로 변환하기 위해
+//알아야 할 컴파일러인거야.
+//이렇게 컴파일러를 설치해서 TSC커맨드를 실행할 수 있어.
+//이 커맨드는 자바스크립트에 해당될 수 있는 타입의 컴파일러를 호출해.
 const button = document.querySelector("button");
 const input1 = document.getElementById("num1")! as HTMLInputElement;
 const input2 = document.getElementById("num2")! as HTMLInputElement;
